@@ -1,0 +1,21 @@
+Audio processing:
+- waveform:
+    + time series
+    + sampling rate
+- mono vs stereo: 
+    + mono: single audio channel
+    + stereo: 2 audio channels(left channel + right channel)
+
+- spectrogram, MFC(mel-frequency cepstrum), MFCCs(mel-frequency cepstrum coefficients)
+
+Public Datasets:
+- Cosvara: https://github.com/iiscleap/CoswaraData
+- COUGHVID
+- Virufy: https://github.com/virufy/virufy_data
+
+- Imbalance data => metrics: area under the ROC curve metric/ recall/ precision 
+
+--- Basic approach: waveform -> spectrogram -> CNN -> feature maps -> Fully connected -> prediction
+
+--- Audio preprocessing:
+    load -> resample -> convert to stereo/mono -> resize to fixed length -> audio augmentation: time shift -> convert to mel spectrogram -> SpecAugment
